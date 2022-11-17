@@ -257,6 +257,7 @@ function traverse(
     }
 
     if (originalValue != null && !isUnion) {
+      // var nextObj = (newObj && newObj[key] !== undefined && newObj[key] !== null) ? newObj[key] : currentObj[key];
       var nextObj = (newObj && newObj[key]) || currentObj[key];
 
       if (typeof nextObj === "object" && !Array.isArray(originalValue)) {
